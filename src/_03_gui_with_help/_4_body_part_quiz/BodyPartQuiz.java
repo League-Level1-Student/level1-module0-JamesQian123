@@ -21,10 +21,10 @@ public class BodyPartQuiz {
 	// package,or if you prefer, get celebrity photos from the Internet,
 	// place them in the recipe package(body_part_quiz), and change the names below.
 
-	String firstImage = "src/_05_body_part_quiz/arnold.jpeg";
-	String secondImage = "src/_05_body_part_quiz/leonardo.jpeg";
-	String thirdImage = "src/_05_body_part_quiz/morgan.jpeg";
-	String fourthImage = "src/_05_body_part_quiz/jack.jpeg";
+	String firstImage = "src/_03_gui_with_help/_4_body_part_quiz/arnold.jpeg";
+	String secondImage = "src/_03_gui_with_help/_4_body_part_quiz/jack.jpeg";
+	String thirdImage = "src/_03_gui_with_help/_4_body_part_quiz/leonardo.jpeg";
+	String fourthImage = "src/_03_gui_with_help/_4_body_part_quiz/morgan.jpeg";
 
 	JFrame window = new JFrame();
 	JPanel panel = new JPanel();
@@ -78,10 +78,31 @@ public class BodyPartQuiz {
 			score += 1;
 		}
 		else {
-			System.out.println("you are wrong, the person is arnold ");
+			System.out.println("you are wrong, the person is jack ");
+			
 		}
-		// 9. Show them their current score
+		showNextImage();
+		String hi = JOptionPane.showInputDialog("who is this?");
+		if(hi .equals("leonardo")) {
+			System.out.println("You are correct");
+			score += 1;
+		}
+		else {
+			System.out.println("you are wrong, the person in leonardo ");
+		}
+		showNextImage();
+		String james = JOptionPane.showInputDialog("who is this?");
+		if(james .equals("morgan")) {
+			System.out.println("you are correct");
+			score += 1;
+		}
+		else {
+			System.out.println("you are wrong, the person is morgan");
+		}
 		
+		// 9. Show them their current score
+		System.out.println(score);
+		showNextImage();
 	}
 
 	public void showNextImage() {

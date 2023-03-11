@@ -70,7 +70,7 @@ public class DrumKit implements MouseListener {
         // Print "mouse clicked" to the console. Run your program and watch
         // the console to see when this is printed.
     	System.out.println("mouse clicked");
-        //JLabel labelClicked = (JLabel) e.getSource(); // This line gets the label
+        JLabel labelClicked = (JLabel) e.getSource(); // This line gets the label
                                                         // that the mouse
                                                         // clicked on
 
@@ -81,8 +81,11 @@ public class DrumKit implements MouseListener {
 
         //  If the user clicks on the drumImage...use the playSound method to play the drum sound.
         //  Test to see if it works before moving on.
-    	//if(mousePressed(e)) {
-    		
+    	if(labelClicked == drumLabel) {
+    		playSound("drum.wav");
+    	}
+    	else if(labelClicked == cymbalLabel) {
+    		playSound("cymbal.wav");
     	}
 
     }
