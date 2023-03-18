@@ -24,7 +24,7 @@ public class FortuneCookie implements ActionListener {
 		int rand = new Random().nextInt(5);
 		JOptionPane.showMessageDialog(null, "Woohoo");
 		if(rand == 1) {
-			JOptionPane.showMessageDialog(nul, "You will have good luck for the rest of the week");
+			JOptionPane.showMessageDialog(null, "You will have good luck for the rest of the week");
 			
 		}
 		else if(rand == 2) {
