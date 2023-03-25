@@ -17,9 +17,7 @@ public class SoundEffectsMachine implements ActionListener {
 	JButton button2 = new JButton();
 	JButton button3 = new JButton();
 	JPanel panel = new JPanel();
-	
-
-	public void run() {
+public void run() {
 		// TODO Auto-generated method stub
 		
 		frame.add(panel);
@@ -31,13 +29,11 @@ public class SoundEffectsMachine implements ActionListener {
 		frame.setVisible(true);
 		
 		button.addActionListener(this);
-		if(button;) {
-			
-		}
+		
 	}
 	
-	private void playSound(String soundFile) {
-		String path = "src/_03_gui_from_scratch/_3_sound_effects_machine/";
+private void playSound(String soundFile) {
+		String path = "src/_04_gui_from_scratch/_3_sound_effects_machine/";
 			File sound = new File(path+soundFile);
 			if (sound.exists()) {
 				new Thread(() -> {
@@ -59,7 +55,19 @@ public class SoundEffectsMachine implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		
-	}
+		if(arg0.getSource() == button) {
+			playSound("sawing-wood-daniel_simon.wav");
+		}
+		else if(arg0.getSource()== button1) {
+			playSound("cow.wav");
+			
+		}
+		else if(arg0.getSource()== button2){
+			playSound("cricket.wav");
+			}
+		else if(arg0.getSource() == button3) {
+			playSound("thunder.wav");
+		}
+		}
 
 }
